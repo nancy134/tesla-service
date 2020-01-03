@@ -31,4 +31,13 @@ app.get('/vehicles', (req, res) => {
     });
 });
 
+app.get('/vehicle/:id', (req, res) => {
+    var token = getToken(req);
+    var vehiclePromise = tesla.vehicle(token,req.params.id);
+    vehiclePromise.then(function(results){
+        res.json(results);
+    }).catch(function(err){
+        res.send(err);
+    });
+});
 app.listen(PORT, HOST);
