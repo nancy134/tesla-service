@@ -6,7 +6,7 @@ exports.vehicles = function(access_token){
         var bearerToken = "Bearer "+access_token;
         var headers = {
             "Authorization" : bearerToken,
-            "User-Agent" : "NP Software Fleet Management/1.0"
+            "User-Agent" : process.env.USER_AGENT
         }
         var options = {
             uri: url,
@@ -28,7 +28,7 @@ exports.vehicle = function(access_token, id){
         var bearerToken = "Bearer "+access_token;
         var headers = {
             "Authorization" : bearerToken,
-            "User-Agent" : "NP Software Fleet Management/1.0"
+            "User-Agent" : process.env.USER_AGENT 
         }
         var options = {
             uri: url,
@@ -51,7 +51,7 @@ exports.drive_state = function(access_token, id){
         var bearerToken = "Bearer "+access_token;
         var headers = {
            "Authorization" : bearerToken,
-            "User-Agent" : "NP Software Fleet Management/1.0"
+            "User-Agent" : process.env.USER_AGENT 
         };
         var options = {
             uri: url,

@@ -18,7 +18,7 @@ function getToken(req){
 }
 
 app.get('/', (req, res) => {
-  res.send('Hello tesla-api.phowma.com');
+  res.send('Hello tesla-api.phowma.com ('+process.env.USER_AGENT+')');
 });
 
 app.get('/vehicles', (req, res) => {
