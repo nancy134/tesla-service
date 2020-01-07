@@ -68,9 +68,9 @@ app.get('/vehicle/:id/location', (req, res) => {
     }).catch(function(err){
         var result = {
             id: req.params.id,
-            latitude: null,
-            longitude: null,
-            speed: null
+            latitude: 0,
+            longitude: 0,
+            speed: 0 
         };
         res.json(result);
     });
